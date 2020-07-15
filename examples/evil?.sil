@@ -1,0 +1,57 @@
+\begin[papersize=250mm x 125mm]{document}\script[src=packages/texmode]\texmode[_="% it is recommended to put the above on one line so error lineno's continue to function ] <-- don't touch me either, i fix vim!
+% sile -d texmode examples/evil?.sil && firefox 'file://'$PWD`bash --login -c 'source ~/.profile && urlencode ''/examples/evil?.pdf'`
+\script[src=packages/rebox]
+\script[src=packages/font-fallback]
+\script[src=packages/features]
+\script[src=packages/frametricks]
+\script[src=packages/strike]
+\script[src=packages/unichar]
+\script[src=packages/rotate]
+\font:add-fallback[family=DejaVu Sans]
+\font:add-fallback[family=Noto Sans Math]
+\font:add-fallback[family=Noto Serif CJK JP]
+\par\begin{center}\begin[size=14pt]{font}\strong{\em Morality test---no cheating!}\end{font}\end{center}
+\par\begin{center}\strong{Mind your \P's, \mathbb{Q}'s, \mathbb{R}'s and \S's, sure, but most of all---be kind!}\end{center}
+\newline
+\par ``Is this, dare I say, \em{evil}?''
+\par ``Ito ba---`wag po kayo ma--offend ha---isa\~~{n}g \em{kasalanan}?''
+\par <<Kore wa\ldots m\={o}shiwake arimasen ne\ldots \em{tsumi} desu ka\rebox[width=0]{?}\glue[width=0.1ex]!>>
+\par ``?`Esto es, me atrevo a decir, \em{malvado}?''
+\par <<Est--ce---oserais--je m\^{e}me dire---\em{mal}?>>
+\par Ist das, wage ich es zu sagen, \em{s\\"{u}ndig}?
+\par 
+\par --`Yes!' --``Oo!'' --``Hai!'' --``!`Si!'' --<<Oui!>> --,,Ja!''
+\par 
+\par ------``Say it ain't so!!\"
+\par 
+\par \notex{``It ain't so!''}
+\script[src=packages/rules]
+\par\noindent\hrule[height=1pt,raise=0.5zw,width=\"31%fw\"]
+\par P\|{e}h-\={o}e-j\={i} for fun \strike[color=#880000]{and profit} \lower[height=.20em]{\~~{~}~\~~{~}~\~~{~}~\~~{~}~}\newline
+\par\noindent\hrule[height=1pt,raise=0.5zw,width=\"31%fw\"]
+\par {\rebox[height=0,depth=0]{\lower[height=1pt]{Never forget this beautiful <\^{h}>. \^{h}\^{h}\^{h}\^{h}\^{h}\ldots\ldots{{\raise[height=0]{\begin[size=72pt - 1em]{font}\^{h}{\font[size=66pt]{!}}\end{font}}}}}}}
+\begin[size=8pt]{font}
+\rebox[height=0,width=0,depth=0]{\raise[height=72pt]{Tinatawag nil\'{a} ak\'{o}\~~{n}g ``magand\'{a}'' dahil ang aki\~~{n}g \em{\^{c}apelo} ay nasa tam\`{a}\~~{n}g lug\'{a}r.}}
+\rebox[height=0,width=0,depth=0]{\raise[height=72pt - 1.25em]{Sa toto\'{o} lang, pa\~~{n}g{}unahi\~~{n}g kagandaha\~~{n}g{-}\'{a}sal sa \~~{m}ga titik magsu\'{o}t \~~{n}g \em{\^{c}apeloa\^{j}oj} ganit\'{o}.}}
+\rebox[height=0,width=0,depth=0]{\raise[height=72pt - 2.50em]{A\~~{n}g \~~{m}ga titik na hindi, sila'y hindi edukado la\~~{n}g p\^{o} kas\'{i}.}}
+\rebox[height=0,width=0,depth=0]{\raise[height=100pt+1.2cm]{\rotate[angle=-25]{\glue[width=0.25cm].\raise[height=0.6ex]{˳}oO( \em{Behold, mere mortals!} Stand ye in awe of my majestic, \em{correctly placed} \^{\unichar{0x25cc}}!}}}
+\rebox[height=0,width=0,depth=0]{\raise[height=100pt+1.3cm]{\rotate[angle=-25]{\glue[width=7cm]ＳＩＬ団体Gentiumのを、凄い‼ )}}}
+\end{font}
+\newline
+More \strike{cool} \strike[n=double]{COOL!} \begin[family=Gentium Basic]{font}\strong{\em{\strike[n=triple]{horrible,} evil!}}\end{font}{ }stuff:
+\\"{a}\'{a}\.{a}\={a}\^{a}\`{a}\|{a}\~{a}\b{a}\c{c}\C{a}\d{a}\f{a}\G{a}\h{a}\H{a}\k{a}\r{a}\t{A}a\u{a}\U{a}\v{a}\~~{a}a
+
+\par\noindent\fullrule[height=1pt,raise=0.5zw,width=100%fw]
+
+The \alpha was good. The \beta, better. Now we're on the \gamma\ldots let's just say we've seen better days. \\ The \Delta between our \heartsuit's keeps growing.
+
+The \pencil is mightier than the \dagger.
+
+\mathfrak{O}? \Omega? \mathsfbf{\Omega}? \mathsfbfit{\Omega}? \mathbfit{\Omega}? \begin[family=EB Garamond]{font}\frac{3}{4} \unichar{0x2212} \frac{1}{2} = \frac{1}{4} = \add-font-feature[Fractions=On]2/8 = 4/16 = 256/1024\end{font}
+
+\nofolios
+\font[family=Latin Modern Roman]
+\define[command=SILE]{S\lower[height=0.5ex]{I}L\glue[width=-.2em]\raise[height=0.6ex]{\font[size=0.8em]{E}}}
+\define[command=LaTeX]{L\glue[width=-.3em]\raise[height=0.4ex]{\font[family=Latin Modern Roman Caps]{A}}\glue[width=-.13em]T\glue[width=-.2em]\lower[height=0.5ex]{E}\glue[width=-.13em]X}
+\typeset-into[frame=folio]{{\hfill \raise[height=0.7em]{\LaTeX{}mode for \SILE (\font[family=Latin Modern Mono]{sile-texmode}) v20200715}\newline\hfill\hfill\copyright Fredrick R. Brennan------This is free software---Apache v2.0 licensed\newline}}
+"]\end{document}

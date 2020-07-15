@@ -1,0 +1,9 @@
+\begin[papersize=250mm x 20mm]{document}\script[src=packages/texmode]\texmode[_="% ]
+\script[src=packages/font-fallback]
+\font:add-fallback[family=Noto Serif CJK JP]
+% This is exactly how Japanese people talk. Anime and nichanneru, extremely reliable sources, taught me that.
+\font[size=20pt]
+おっす、世界！元気のか！俺ハイハイ！さって〜行くぞ！じゃね‼‼
+
+The above is known as a ``quote\".
+"]\end{document}

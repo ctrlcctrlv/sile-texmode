@@ -1,0 +1,66 @@
+\begin{document}\script[src=packages/texmode]\texmode[_="
+% it is recommended to put the above on one line so error lineno's continue to function ] <-- don't touch me either, i fix vim!
+\script[src=packages/frametricks]
+\script[src=packages/raiselower]
+\font[family=EB Garamond]
+\par\begin{center}\begin[size=20pt]{font}\strong{Gipsy Kings}\end{font}\end{center}
+\par\begin{center}\begin[size=16pt]{font}\strong{\em{A mi manera} (1987)}\end{font}\end{center}
+\newline
+\breakframevertical
+\makecolumns
+\par[\em{Verse 1}]\\
+\define[command=v1]{
+Yo s\'{e}\\
+Que no vendr\'{a}s\\
+Por eso ya\\
+Tanto la olvido\ldots\\
+\par \par Dejar\\
+Un nuevo amor\\
+Tanto mejor\\
+Ay como el m\'{i}o\\
+\par \par Dejar\\
+Y la vive\\
+Ay en este mundo\ldots\\
+De tristeza, au\\
+\par \par Dejar\\
+Y la vive\\
+!`Ay mi manera, oh!\\
+\process}\v1
+\par \par[\em{Verse 2}]\\
+\define[command=v2]{
+Yo quiero ser\\
+Hay nada m\'{a}s\\
+Prefierar\'{e}\\
+Y recordar\\
+\par \par !`Un nuevo amor\\
+Tanto mejor!\\
+!`Quise olvidarte\\
+Toda dejo!\\
+\par \par !`Quisiera vivir!\\
+Hay nada más\\
+!`\'{O} sí my way, ayu!\\
+\process}\v2
+\par \par[\em{Instrumental}]\\
+\eject\par \par[\em{Verse 1}]\\
+\v1
+\par \par[\em{Verse 2}]\\
+\v2
+\par \par[\em{Outro}]\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+\par \par !`\'{O} sí my way, ayu!\\
+\par \par !`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+!`Lo lai lo lai!\\
+\par \par !`\'{O}, sí my way, ayyyuu!\\
+\nofolios
+\define[command=SILE]{S\lower[height=0.5ex]{I}L\glue[width=-.2em]\raise[height=0.6ex]{\font[size=0.8em]{E}}}
+\typeset-into[frame=folio]{\lower[height=4em]{\hfill This document was typeset with \SILE.}}
+"]\end{document}
