@@ -1,6 +1,18 @@
-# TeX mode for SILE
+# LaTeX mode for SILE
 
-What it says on the tin.
+![](https://raw.githubusercontent.com/ctrlcctrlv/sile-texmode/master/examples/evil%3F.png)
+
+What it says on the tin. You type:
+
+```
+P\|{e}h-\={o}e-j\={i}---a method of writing Taiwanese
+```
+
+You get:
+
+> Pe̍h-ōe-jī—a method of writing Taiwanese
+
+Please see the [examples](https://github.com/ctrlcctrlv/sile-texmode/tree/master/examples).
 
 ## Dependencies
 * SILE >= v0.10.5.r107-g36868e2, *not* compatible with v0.10.5 or lower (so, all current releases as of 2020-07-15, only works on developer builds), as we need PR&numero;[940](https://github.com/sile-typesetter/sile/pull/940).
@@ -51,6 +63,8 @@ The above is known as a ``quote". % won't work!
 The above is known as a ``quote\". % will work!
 "]\end{document}
 ```
+
+![](https://raw.githubusercontent.com/ctrlcctrlv/sile-texmode/master/examples/dblquote.png)
 
 Anyway, you know that even in TeX ``` ``this" ``` is bad, right? It's unbalanced in monospace, silly! Do it ``` ``this way'' ```.
 
