@@ -51,7 +51,7 @@ The \pencil is mightier than the \dagger.
 
 \nofolios
 \font[family=Latin Modern Roman]
-\define[command=SILE]{S\lower[height=0.5ex]{I}L\glue[width=-.2em]\raise[height=0.6ex]{\font[size=0.8em]{E}}}
+\define[command=SILE]{S\lower[height=0.5ex]{I}L\glue[width=-.2em]\raise[height=0.6ex]{E}}
 \define[command=LaTeX]{L\glue[width=-.3em]\raise[height=0.4ex]{\font[family=Latin Modern Roman Caps]{A}}\glue[width=-.13em]T\glue[width=-.2em]\lower[height=0.5ex]{E}\glue[width=-.13em]X}
 \typeset-into[frame=folio]{{\hfill \raise[height=0.7em]{\LaTeX{}mode for \SILE (\font[family=Latin Modern Mono]{sile-texmode}) v20200715}\newline\hfill\hfill\copyright Fredrick R. Brennan------This is free software---Apache v2.0 licensed\newline}}
 "]\end{document}
