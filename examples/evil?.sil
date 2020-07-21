@@ -1,5 +1,6 @@
 \begin[papersize=250mm x 125mm]{document}\script[src=packages/texmode]\texmode[_="% it is recommended to put the above on one line so error lineno's continue to function ] <-- don't touch me either, i fix vim!
-% sile -d texmode examples/evil?.sil && firefox 'file://'$PWD`bash --login -c 'source ~/.profile && urlencode ''/examples/evil?.pdf'`
+% jy$:!<^R>"
+% sile -d texmode examples/evil?.sil && firefox 'file://'$PWD`bash --login -c 'source ~/.profile && urlencode ''/examples/evil?.pdf'` && gm -density 400 examples/evil?.pdf -density 400 examples/evil?.png
 \script[src=packages/rebox]
 \script[src=packages/font-fallback]
 \script[src=packages/features]
@@ -31,10 +32,10 @@
 \par\noindent\hrule[height=1pt,raise=0.5zw,width=\"31%fw\"]
 \par {\rebox[height=0,depth=0]{\lower[height=1pt]{Never forget this beautiful <\^{h}>. \^{h}\^{h}\^{h}\^{h}\^{h}\ldots\ldots{{\raise[height=0]{\begin[size=72pt - 1em]{font}\^{h}{\font[size=66pt]{!}}\end{font}}}}}}}
 \begin[size=8pt]{font}
-\rebox[height=0,width=0,depth=0]{\raise[height=72pt]{Tinatawag nil\'{a} ak\'{o}\~~{n}g ``magand\'{a}'' dahil ang aki\~~{n}g \em{\^{c}apelo} ay nasa tam\`{a}\~~{n}g lug\'{a}r.}}
-\rebox[height=0,width=0,depth=0]{\raise[height=72pt - 1.25em]{Sa toto\'{o} lang, pa\~~{n}g{}unahi\~~{n}g kagandaha\~~{n}g{-}\'{a}sal sa \~~{m}ga titik magsu\'{o}t \~~{n}g \em{\^{c}apeloa\^{j}oj} ganit\'{o}.}}
+\rebox[height=0,width=0,depth=0]{\raise[height=72pt]{{Tinatawag nil\'{a} ak\'{o}\~~{n}g ``magand\'{a}'' dahil ang aki\~~{n}g }{\em{\^{c}apelo}}{ ay nasa tam\`{a}\~~{n}g lug\'{a}r.}}}
+\rebox[height=0,width=0,depth=0]{\raise[height=72pt - 1.25em]{Sa toto\'{o} lang, pa\~~{n}g{}unahi\~~{n}g kagandaha\~~{n}g{-}\'{a}sal sa \~~{m}ga titik magsu\'{o}t \~~{n}g \em{\^{c}apela\^{j}oj} ganit\'{o}.}}
 \rebox[height=0,width=0,depth=0]{\raise[height=72pt - 2.50em]{A\~~{n}g \~~{m}ga titik na hindi, sila'y hindi edukado la\~~{n}g p\^{o} kas\'{i}.}}
-\rebox[height=0,width=0,depth=0]{\raise[height=100pt+1.2cm]{\rotate[angle=-25]{\glue[width=0.25cm].\raise[height=0.6ex]{˳}oO( \em{Behold, mere mortals!} Stand ye in awe of my majestic, \em{correctly placed} \^{\unichar{0x25cc}}!}}}
+\rebox[height=0,width=0,depth=0]{\raise[height=100pt+1.2cm]{\rotate[angle=-25]{\glue[width=0.25cm].\raise[height=0.6ex]{˳}oO( \em{Behold, mere mortals!} Stand ye in awe of my majestic, \em{correctly placed} \^{◌}!}}}
 \rebox[height=0,width=0,depth=0]{\raise[height=100pt+1.3cm]{\rotate[angle=-25]{\glue[width=7cm]ＳＩＬ団体Gentiumのを、凄い‼ )}}}
 \end{font}
 \newline
@@ -53,5 +54,21 @@ The \pencil is mightier than the \dagger.
 \font[family=Latin Modern Roman]
 \define[command=SILE]{S\lower[height=0.5ex]{I}L\glue[width=-.2em]\raise[height=0.6ex]{E}}
 \define[command=LaTeX]{L\glue[width=-.3em]\raise[height=0.4ex]{\font[family=Latin Modern Roman Caps]{A}}\glue[width=-.13em]T\glue[width=-.2em]\lower[height=0.5ex]{E}\glue[width=-.13em]X}
-\typeset-into[frame=folio]{{\hfill \raise[height=0.7em]{\LaTeX{}mode for \SILE (\font[family=Latin Modern Mono]{sile-texmode}) v20200715}\newline\hfill\hfill\copyright Fredrick R. Brennan------This is free software---Apache v2.0 licensed\newline}}
+"]
+\script{
+require "os"
+n = os.tmpname()
+SILE.registerCommand("siletexmodeversion", function(_, _) 
+    os.execute("git rev-parse master > " .. n)
+    local line = io.lines(n)()
+    print(line)
+    SILE.typesetter:typeset( line:sub(1, 8) )
+end, "Version of sile-texmode")
+SILE.registerCommand("compiled", function(_, _)
+    SILE.typesetter:typeset( os.date("%Y%m%d") )
+end, "sile-texmode compiled document at")
+}
+\texmode[_="
+\define[command=version]{\begin[family=Latin Modern Mono]{font}\siletexmodeversion\process\end{font}}
+\typeset-into[frame=folio]{{\hfill \raise[height=0.7em]{\LaTeX{}mode for \SILE (\font[family=Latin Modern Mono]{sile-texmode}) v\version, built on \compiled}\newline\hfill\hfill\copyright Fredrick R. Brennan------This is free software---Apache v2.0 licensed\newline}}
 "]\end{document}
