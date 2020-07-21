@@ -211,7 +211,7 @@ local function texmode(options, content)
                         if depth > maxdepth then maxdepth = depth end
                         if depth == 0 then break end
                     end
-                    skip = carg:len() + ctest:len() + 1 -- for \
+                    skip = utf8.len(carg) + ctest:len() + 1 -- for \
                     carg = carg:gsub('^%{', ''):gsub('%}$', '')
                     output = output .. carg
                     output = output .. utf8.char(cmatched)
