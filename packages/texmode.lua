@@ -132,7 +132,8 @@ local function texmode(options, content)
     if not options.nosymbols then define_symbols() end
     if not options.nocombine then define_combining_characters() end
     -- remove most comments
-    input = input:gsub('%%[^a-z].-([\r\n][\r\n]?)', '%1')
+    -- input = input:gsub('%%[^a-z].-([\r\n][\r\n]?)', '%1')
+    input = input:gsub('\\\\', '\\newline{}')
     local output = ''
     local utf8l = 1
     local bytel = 1
